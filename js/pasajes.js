@@ -6,11 +6,13 @@ const pasaje_ushuaia = 10000;
 const pasaje_las_grutas = 8000;
 const pasaje_bahia_blanca = 7000;
 
+/* variables globales */ 
 let destino_elegido;
 let cuotas_elegidas;
 let compras_efectuadas = [];
 let string_destino;
 
+/* info del dom */ 
 let boton_comprar = document.getElementById('boton_comprar');
 let cuotas = document.querySelectorAll('.cuotas');
 let destinos_btn = document.querySelectorAll('.destinos');
@@ -83,11 +85,6 @@ function calcular_precio_final(){
         // convierto a json
         let compras_JSON = JSON.stringify(compras_efectuadas)
         localStorage.setItem("compras_efectuadas", compras_JSON)
-        /*
-        for(let i=0; i < localStorage.length; i++){
-            let key = localStorage.key(i);
-            localStorage.getItem(key);
-        }*/
     }
     saveData();
     

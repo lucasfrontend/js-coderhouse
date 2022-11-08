@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova&family=Roboto:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova&family=Indie+Flower&family=Satisfy&display=swap');
+$bg-color-orange: rgb(94, 80, 56);
+
+$colores-redes: (
+    facebook: #3b5998,
+    twitter: #00acee,
+    instagram: #C13584,
+    youtube: #c4302b
+);
+
+@mixin sombras(){
+    border-radius: 15px;
+    box-shadow: 0px 10px 10px black;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #b1b1b1;
+    background-color: #F3F6FF;
+    color: #28010d;
+    main{
+        min-height: 100vh;
+        div{
+            /* Galeria */
+            .items{
+                margin: 10px;
+                max-width: 150px;
+                max-height: 150px;
+                background-size: cover; 
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-family: 'Ibarra Real Nova', serif;
+                background-color: #b1b1b1;
+                color: rgb(255, 250, 250);
+                @include sombras;
+                h3{
+                    padding: 50px;
+                }
+                
+            }
+            .items:hover {
+                color: orange;
+                cursor: pointer;
+                filter: blur(1px);
+                transition:all 1.05s ease-in-out;    
+            }
+            .bg-img{
+                background-image: no-repeat;
+                background-image: center;
+                -webkit-filter: grayscale(100%);
+                filter: grayscale(100%);                
+            }
+            .item1 {
+                background-image: url("../assets/madryn.webp");
+
+            } 
+            .item2 {
+                background-image: url("../assets/bariloche.jpg");
+            } 
+            .item3 {
+                background-image: url("../assets/Las-grutas.webp");
+            } 
+            .item4 {
+                background-image: url("../assets/comodoro.jpg");
+            }
+            .item5 {
+                background-image: url("../assets/ushuaia.jpeg");
+            } 
+            .item6 {
+                background-image: url("../assets/bahia.jpg");
+            }
+            .item7 {
+                background-image: url("../assets/a7.jpg");
+            }
+            .item8 {
+                background-image: url("../assets/a8.jpg");
+            }
+            .item9 {
+                background-image: url("../assets/a9.jpg");
+            }
+
+            .destinos {
+                background-color: #00acee;
+            }
+
+        }
+        .container{
+            div{
+                div{
+                    div{
+                        .ubicacion{
+                            max-width: 300px;
+                            max-height: 300px;
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+
+    footer{
+        background-color: $bg-color-orange;
+
+    }
+}
+
+@media (max-width: 870px) {
+    h3{
+        text-align: center;
+        padding: 10px;
+    }
+  }

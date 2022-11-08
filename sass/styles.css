@@ -1,0 +1,216 @@
+@import url("https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova&family=Roboto:wght@100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova&family=Indie+Flower&family=Satisfy&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #b1b1b1;
+  background-color: #F3F6FF;
+  color: #28010d;
+}
+body header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+body header nav {
+  background-color: rgb(94, 80, 56);
+}
+body header nav .container-fluid .logo {
+  background-image: url("../assets/argentina.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 5px;
+  min-height: 50px;
+  min-width: 40px;
+}
+body header nav .container-fluid .collapse ul li .fa-facebook-f {
+  color: rgb(9, 8, 8);
+}
+body header nav .container-fluid .collapse ul li .fa-instagram {
+  color: rgb(9, 8, 8);
+}
+body header nav .container-fluid .collapse ul li .fa-twitter {
+  color: rgb(9, 8, 8);
+}
+body header nav .container-fluid .collapse ul li .fa-youtube {
+  color: rgb(9, 8, 8);
+}
+body main {
+  min-height: 90vh;
+}
+body main #hero {
+  background-image: url("../assets/a4.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 90vh;
+}
+body main #hero .title-container {
+  /*animacion humo*/
+}
+body main #hero .title-container h1 {
+  font-family: "Roboto";
+  font-size: 3rem;
+}
+body main #hero .title-container .humo {
+  width: 100%;
+  height: 6px;
+  background: orange;
+  transform-origin: top, left;
+  -webkit-animation: animacion_humo_bg 5s infinite ease-in-out;
+          animation: animacion_humo_bg 5s infinite ease-in-out;
+}
+@-webkit-keyframes animacion_humo_bg {
+  0% {
+    transform: scale(0.01, 1);
+    transform-origin: left;
+    filter: blur(10px);
+  }
+  100% {
+    transform: scale(1, 1);
+    transform-origin: left;
+    filter: blur(10px);
+  }
+}
+@keyframes animacion_humo_bg {
+  0% {
+    transform: scale(0.01, 1);
+    transform-origin: left;
+    filter: blur(10px);
+  }
+  100% {
+    transform: scale(1, 1);
+    transform-origin: left;
+    filter: blur(10px);
+  }
+}
+body main #hero .title-container h3 {
+  font-size: 3rem;
+}
+body main #galeria {
+  padding-top: 70px;
+}
+body main #nosotres-container {
+  padding-top: 70px;
+}
+body main div {
+  /* Galeria */
+}
+body main div div article .cita, body main div div article p span {
+  font-family: "Ibarra Real Nova", serif;
+  font-size: 1.3rem;
+  background-color: rgba(214, 214, 214, 0.3921568627);
+}
+body main div div .alice {
+  border-radius: 15px;
+  box-shadow: 0px 10px 10px black;
+}
+body main div div .form-container {
+  border-radius: 15px;
+  box-shadow: 0px 10px 10px black;
+}
+body main div .items {
+  min-width: 200px;
+  min-height: 200px;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Ibarra Real Nova", serif;
+  background-color: #b1b1b1;
+  color: rgb(255, 250, 250);
+  border-radius: 15px;
+  box-shadow: 0px 10px 10px black;
+}
+body main div .items:hover {
+  color: orange;
+  cursor: pointer;
+  filter: blur(1px);
+  transition: all 1.05s ease-in-out;
+}
+body main div .bg-img {
+  background-image: no-repeat;
+  background-image: center;
+  filter: grayscale(100%);
+}
+body main div .item1 {
+  background-image: url("../assets/madryn.webp");
+}
+body main div .item2 {
+  background-image: url("../assets/bariloche.jpg");
+}
+body main div .item3 {
+  background-image: url("../assets/Las-grutas.webp");
+}
+body main div .item4 {
+  background-image: url("../assets/comodoro.jpg");
+}
+body main div .item5 {
+  background-image: url("../assets/ushuaia.jpeg");
+}
+body main div .item6 {
+  background-image: url("../assets/bahia.jpg");
+}
+body main div .item7 {
+  background-image: url("../assets/a7.jpg");
+}
+body main div .item8 {
+  background-image: url("../assets/a8.jpg");
+}
+body main div .item9 {
+  background-image: url("../assets/a9.jpg");
+}
+body main .container div div div .ubicacion {
+  max-width: 300px;
+  max-height: 300px;
+}
+body main #contacto {
+  background-image: url("../assets/a1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 90vh;
+}
+body main #contacto div .form-container {
+  background-color: rgba(0, 0, 0, 0.55);
+  color: white;
+}
+body main #contacto div .form-container .contactenos {
+  background-color: transparent;
+}
+body main #contacto div .form-container .card {
+  background-color: rgba(255, 166, 0, 0.322);
+}
+body footer {
+  background-color: rgb(94, 80, 56);
+}
+
+@media (max-width: 870px) {
+  #hero {
+    background-image: url("../assets/comidaveggie-backgroundimage.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 90vh;
+  }
+  .firma > p, .firma > p > .mi-nombre {
+    font-size: 0.8rem;
+  }
+  h1 {
+    color: #F3F6FF;
+  }
+  h3 {
+    background-color: whitesmoke;
+    border-radius: 3px;
+    text-align: center;
+    padding: 5px;
+  }
+  .humo {
+    display: none;
+  }
+}/*# sourceMappingURL=styles.css.map */

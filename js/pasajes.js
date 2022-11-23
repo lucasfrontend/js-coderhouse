@@ -1,3 +1,26 @@
+/* datos para mostrar clima*/
+
+const latMad = '-42.76705657797566' ;
+const lonMad = '-65.03900027311204';
+
+const lonCom = '-67.49656';
+const latCom = '-45.86413' ;
+
+const lonBar = '-71.30822';
+const latBar = '-41.14557' ;
+
+const lonUsh = '-68.31591';
+const latUsh = '-54.81084' ;
+
+const lonGrut = '-64.9333';
+const latGrut = '-40.7333' ;
+
+const lonBb = '-62.2833';
+const latBb = '-38.7167' ;
+
+const part = 'hourly,daily'; 
+const key = `e7ea28eea6e66941216ebf0b7faa1321`;
+
 /* precios */ 
 const pasaje_madryn = 8000;
 const pasaje_comodoro = 8500;
@@ -17,6 +40,7 @@ let boton_comprar = document.getElementById('boton_comprar');
 let cuotas = document.querySelectorAll('.cuotas');
 let destinos_btn = document.querySelectorAll('.destinos');
 let result = document.getElementById('result');
+let clima = document.getElementById('clima');
 
 boton_comprar.addEventListener('click', function(){
 
@@ -29,6 +53,7 @@ boton_comprar.addEventListener('click', function(){
     if(destino_elegido == 1){
         string_destino = 'Puerto Madryn';
         precio_pasaje = pasaje_madryn;
+        
     
     } else if (destino_elegido == 2){
         string_destino = 'Comodoro Rivadavia';
@@ -101,4 +126,44 @@ function calcular_precio_final(){
 
     showData(destino_elegido, precio_final);
 
+    let resultClima = async function(){
+
+        let resultClima = await fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${latitud}&lon=${longitud}&lang=es&unit=metric&exclude=${part}&appid=${key}`)
+        .then(res => res.json())
+        .then(res =>{
+            console.log( Math.round(res.status) , 'respuesta de clima')
+            clima.innerHTML = `<div class="text-center"><h5>Temperatura actual en ${string_destino}: ${Math.round(res.current.temp).toString().substring(0,2)} grados</h5></div>`;
+        
+        })
+    }
+    if(destino_elegido == 1){
+        latitud = latMad;
+        longitud = lonMad;
+        
+    } else if (destino_elegido == 2){
+        latitud = latCom;
+        longitud = lonCom;
+    
+    } else if (destino_elegido == 3){
+        latitud = latBar;
+        longitud = lonBar;
+    
+    } else if (destino_elegido == 4){
+        latitud = latUsh;
+        longitud = lonUsh;
+    
+    } else if (destino_elegido == 5){
+        latitud = latGrut;
+        longitud = lonGrut;
+    
+    } else if (destino_elegido == 6){
+        latitud = latBb;
+        longitud = lonBb;
+    }else {
+        
+    }
+
+    resultClima()
+
 };
+

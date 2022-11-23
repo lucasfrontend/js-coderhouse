@@ -131,7 +131,6 @@ function calcular_precio_final(){
         let resultClima = await fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${latitud}&lon=${longitud}&lang=es&unit=metric&exclude=${part}&appid=${key}`)
         .then(res => res.json())
         .then(res =>{
-            console.log( Math.round(res.status) , 'respuesta de clima')
             clima.innerHTML = `<div class="text-center"><h5>Temperatura actual en ${string_destino}: ${Math.round(res.current.temp).toString().substring(0,2)} grados</h5></div>`;
         
         })
